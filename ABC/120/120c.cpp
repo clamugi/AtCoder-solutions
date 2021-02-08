@@ -13,6 +13,7 @@ int main(){
     string S;
     cin >> S;
 
+
     stack<int>a;
 
     int ans = 0;
@@ -37,3 +38,16 @@ int main(){
 
 
 }
+
+
+/*
+
+    vector<int>kazu(2,0)
+    rep(i,S.length()){
+        kazu[S[i]-'0'] ++;
+    }
+
+    cout << min(kazu[0],kazu[1]) << endl;
+
+
+*/
