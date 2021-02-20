@@ -29,16 +29,8 @@ int main(){
             cout << 0 << endl;
             return 0;
         }
-
-        N = "";
-        while(f>0){
-            N += '0' + f%10;
-            f/=10;
-        }
-
+        N = to_string(f);
     }
-
-    if(K != 0)reverse(N.begin(),N.end());
     cout << N << endl;
 
 }
