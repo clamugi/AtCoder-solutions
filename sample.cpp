@@ -72,3 +72,34 @@ struct UnionFind {
         return -par[root(x)];
     }
 };
+
+
+/* 二部探索 */
+
+
+/*
+ index が条件を満たすかどうか
+ if文をいじる
+*/
+bool isOK(int a) {
+    if (a == 1) return true;
+    else return false;
+}
+/* 
+ binari_sezrch(ok,ng)でokとngを渡す方がよい
+ 条件を満たす最小の値をokで返す。
+ ng⇔okで条件を満たす最大の値をokで返す
+ */
+int binari_search(int key){
+    //ngとokは範囲外に
+    int ng = -1;
+    int ok = 10e9+1;
+
+    while (abs(ok - ng) > 1) {
+        int mid = (ok + ng) / 2;
+
+        if (isOK(mid)) ok = mid;
+        else ng = mid;
+    }
+    return ok;
+}
