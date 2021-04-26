@@ -15,6 +15,6 @@ int main(){
     int X, Y, Z;
     cin >> X >> Y >> Z;
 
-        cout << (Y * Z - 1) / X << endl;
+    cout << (Y * Z - 1) / X << endl;
 
 }
